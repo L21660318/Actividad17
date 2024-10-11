@@ -1,0 +1,125 @@
+/* Estilo general para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 50px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para el encabezado */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Estilo para la entrada de notas */
+.note-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el área de texto */
+#new-note {
+    resize: none;
+    height: 100px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#new-note:focus {
+    outline: none;
+    border-color: #0066ff;
+}
+
+/* Estilo para el botón de agregar nota */
+#add-note-btn {
+    align-self: flex-end;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 102, 255, 0.2);
+}
+
+#add-note-btn:hover {
+    background-color: #0051cc;
+    transform: translateY(-2px);
+}
+
+/* Contenedor de notas */
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo para cada nota */
+.note {
+    background-color: #fafafa;
+    padding: 15px;
+    border-left: 5px solid #0066ff;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el texto de la nota */
+.note p {
+    margin: 0;
+    word-wrap: break-word;
+    color: #444;
+}
+
+/* Estilo para el botón de eliminar */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #ff3333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #cc0000;
+}
